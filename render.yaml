@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: coverletter-cutie-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    branch: main
+    envVars:
+      - key: TOGETHER_API_KEY
+        sync: false
+      - key: TOGETHER_MODEL
+        sync: false
